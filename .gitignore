@@ -132,3 +132,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Prisma
+*/prisma/migrations
+*.db*

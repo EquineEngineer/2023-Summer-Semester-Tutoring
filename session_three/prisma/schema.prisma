@@ -1,0 +1,33 @@
+// database
+datasource db {
+    provider = "sqlite"
+    url      = "file:database.db"
+}
+
+// generator
+generator client {
+    provider             = "prisma-client-py"
+    recursive_type_depth = 5
+}
+
+// Enum
+// enum Gender {
+//     male
+//     female
+//     diverse
+// }
+
+// models
+model Person {
+    name           String @id
+    age            Int
+    gender         String
+    favouritePizza Pizza? @relation(fields: [pizzaName], references: [name])
+    pizzaName      String
+}
+
+model Pizza {
+    name   String   @id
+    price  Int
+    Person Person[]
+}
