@@ -13,7 +13,9 @@ It leverages type annotations to generate a schema and then generates a client t
 ### Useful links:
 
 [Prisma Docs (Typescript)](https://www.prisma.io/docs/)
+
 [Prisma client Python](https://prisma-client-py.readthedocs.io/en/stable/)
+
 [Prisma client Rust](https://prisma.brendonovich.dev)
 
 ### How to use Prisma
