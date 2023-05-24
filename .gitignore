@@ -139,3 +139,6 @@ dmypy.json
 
 # Assignment solutions
 sorting_algorithms.pseudo
+test.description.md
+session_seven/schema.prisma
+bonus.py

@@ -5,7 +5,7 @@
 function bubbleSort(array)
     for i from 1 to length(array) - 1
         for j from 0 to length(array) - 2
-            < BLANK >
+            if array[j] > array[j + 1]
                 swap(array[j], array[j + 1])
             end if
         end for
@@ -22,7 +22,7 @@ function selectionSort(array)
                 min = j
             end if
         end for
-        < BLANK >
+        swap[array[i], array[min]]
     end for
 end function
 
@@ -54,7 +54,7 @@ function mergeSort(array)
     left = mergeSort(left)
     right = mergeSort(right)
 
-    < BLANK >
+    return merge(left, right)
 end function
 
 function merge(left, right)
@@ -95,7 +95,7 @@ function quickSort(array)
     right = empty array
 
     for i from 1 to length(array) - 1
-        < BLANK >
+        if pivot > array[i]
             append array[i] to left
         else
             append array[i] to right
@@ -126,7 +126,7 @@ function heapSort(array)
     end = length(array) - 1
     while end > 0
         swap(array[end], array[0])
-        < BLANK >
+        set end to end - 1
         siftDown(array, 0, end)
     end while
 end function
