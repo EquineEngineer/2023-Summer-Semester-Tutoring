@@ -136,3 +136,6 @@ dmypy.json
 # Prisma
 */prisma/migrations
 *.db*
+
+# Assignment solutions
+sorting_algorithms.pseudo

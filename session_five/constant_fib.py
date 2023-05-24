@@ -1,4 +1,5 @@
 from functools import cache
+import operator
 
 
 def fib(n):

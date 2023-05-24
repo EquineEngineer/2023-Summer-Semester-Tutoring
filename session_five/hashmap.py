@@ -25,7 +25,7 @@ class HashMap:
         >>> h["foo"]
         'bar'
         """
-        self._keys = []
+        self._keys = set()
         self._values = [None] * INITIAL_SIZE
 
     def _hash(self, key):
@@ -63,7 +63,7 @@ class HashMap:
         """
         key_hash = self._hash(key)
         self._values[key_hash] = value
-        self._keys.append(key)
+        self._keys.add(key)
 
     def __delitem__(self, key):
         """
@@ -76,7 +76,7 @@ class HashMap:
         """
         key_hash = self._hash(key)
         del self._values[key_hash]
-        self._keys.pop(self._keys.index(key))
+        self._keys.remove(key)
 
     def __iter__(self):
         """

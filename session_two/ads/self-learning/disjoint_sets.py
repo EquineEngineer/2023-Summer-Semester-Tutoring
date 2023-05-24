@@ -1,6 +1,5 @@
-class DisjointSets():
-    
-    def __init__():
+class DisjointSets:
+    def __init__(self):
         """
         Initially the Disjoint-Sets contains only the empty set
         """

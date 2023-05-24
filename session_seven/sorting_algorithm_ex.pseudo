@@ -1,0 +1,165 @@
+!Pseudo code examples for sorting algorithms
+
+!Bubble sort
+
+function bubbleSort(array)
+    for i from 1 to length(array) - 1
+        for j from 0 to length(array) - 2
+            < BLANK >
+                swap(array[j], array[j + 1])
+            end if
+        end for
+    end for
+end function
+
+!Selection sort
+
+function selectionSort(array)
+    for i from 0 to length(array) - 1
+        min = i
+        for j from i + 1 to length(array) - 1
+            if array[j] < array[min]
+                min = j
+            end if
+        end for
+        < BLANK >
+    end for
+end function
+
+!Insertion sort
+
+function insertionSort(array)
+    for i from 1 to length(array) - 1
+        x = array[i]
+        j = i - 1
+        while j >= 0 and array[j] > x
+            array[j + 1] = array[j]
+            < BLANK >
+        end while
+        array[j + 1] = x
+    end for
+end function
+
+!Merge sort
+
+function mergeSort(array)
+    if length(array) <= 1
+        return array
+    end if
+
+    middle = length(array) / 2
+    left = array from 0 to middle - 1
+    right = array from middle to length(array) - 1
+
+    left = mergeSort(left)
+    right = mergeSort(right)
+
+    < BLANK >
+end function
+
+function merge(left, right)
+    result = empty array
+
+    while length(left) > 0 and length(right) > 0
+        if first(left) <= first(right)
+            append first(left) to result
+            left = rest(left)
+        else
+            append first(right) to result
+            right = rest(right)
+        end if
+    end while
+
+    while length(left) > 0
+        append first(left) to result
+        left = rest(left)
+    end while
+
+    while length(right) > 0
+        append first(right) to result
+        right = rest(right)
+    end while
+
+    return result
+end function
+
+!Quick sort
+
+function quickSort(array)
+    if length(array) <= 1
+        return array
+    end if
+
+    pivot = array[0]
+    left = empty array
+    right = empty array
+
+    for i from 1 to length(array) - 1
+        < BLANK >
+            append array[i] to left
+        else
+            append array[i] to right
+        end if
+    end for
+
+    left = quickSort(left)
+    right = quickSort(right)
+
+    return concatenate(left, pivot, right)
+end function
+
+function concatenate(left, pivot, right)
+    result = empty array
+
+    append left to result
+    append pivot to result
+    append right to result
+
+    return result
+end function
+
+!Heap sort
+
+function heapSort(array)
+    heapify(array, length(array))
+
+    end = length(array) - 1
+    while end > 0
+        swap(array[end], array[0])
+        < BLANK >
+        siftDown(array, 0, end)
+    end while
+end function
+
+function heapify(array, count)
+    start = floor((count - 2) / 2)
+
+    while start >= 0
+        siftDown(array, start, count - 1)
+        start = start - 1
+    end while
+end function
+
+function siftDown(array, start, end)
+    root = start
+
+    while root * 2 + 1 <= end
+        child = root * 2 + 1
+        swap = root
+
+        if array[swap] < array[child]
+            swap = child
+        end if
+
+        if child + 1 <= end and array[swap] < array[child + 1]
+            swap = child + 1
+        end if
+
+        if swap != root
+            swap(array[root], array[swap])
+            root = swap
+        else
+            return
+        end if
+    end while
+end function
