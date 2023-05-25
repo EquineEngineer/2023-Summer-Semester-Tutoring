@@ -142,3 +142,6 @@ sorting_algorithms.pseudo
 test.description.md
 session_seven/schema.prisma
 bonus.py
+
+# Other environments
+venv310
